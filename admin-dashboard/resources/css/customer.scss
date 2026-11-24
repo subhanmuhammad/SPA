@@ -1,0 +1,145 @@
+$primary: #2b6f66;
+$secondary: #8cc8be;
+$light: #f4f8f7;
+$dark: #242a36;
+$font-family-base: 'Open Sans', sans-serif;
+$headings-font-family: 'Playfair Display', serif;
+$body-color: #4d5462;
+$headings-color: $dark;
+$headings-font-weight: 500;
+$display-font-weight: 600;
+$border-radius: 10px;
+$border-radius-sm: $border-radius;
+$border-radius-lg: $border-radius;
+$link-decoration: none;
+$enable-negative-margins: true;
+
+@import 'bootstrap/scss/bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+@import 'terapia/template';
+
+.navbar-brand img {
+    height: 50px;
+    width: 50px;
+    border-radius: 8px;
+}
+
+.hero {
+    position: relative;
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(rgba(36, 42, 54, 0.72), rgba(36, 42, 54, 0.72)), url('../../public/images/site/hero.jpg') center / cover no-repeat;
+}
+
+.cta-banner {
+    background: linear-gradient(rgba(36, 42, 54, 0.82), rgba(36, 42, 54, 0.82)), url('../../public/images/site/promo.jpg') center / cover no-repeat;
+}
+
+.service .service-item:hover .service-content::before {
+    background: rgba(36, 42, 54, 0.96);
+}
+
+.service .service-item .service-content .price {
+    font-family: $headings-font-family;
+    font-size: 1.5rem;
+    color: $primary;
+}
+
+.service .service-item:hover .service-content .price,
+.service .service-item:hover .service-content .text-muted,
+.service .service-item:hover .service-content del {
+    color: var(--bs-white) !important;
+}
+
+.saving-badge {
+    background: rgba($secondary, 0.35);
+    color: $dark;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.choice {
+    cursor: pointer;
+    border: 1px solid rgba($dark, 0.15);
+    border-radius: $border-radius;
+    padding: 0.85rem 1rem;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.choice:has(input:checked) {
+    border-color: $primary;
+    background: rgba($secondary, 0.18);
+}
+
+.choice:has(input:focus-visible) {
+    outline: 3px solid rgba($primary, 0.5);
+    outline-offset: 2px;
+}
+
+.step-number {
+    display: inline-flex;
+    width: 2rem;
+    height: 2rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: $dark;
+    color: #fff;
+    font-family: $font-family-base;
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+}
+
+.photo-credits a {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: underline;
+}
+
+.footer .footer-item a,
+.footer .footer-item p {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+html,
+body {
+    overflow-x: clip;
+}
+
+.choice .form-check-input {
+    border-color: rgba($dark, 0.5);
+}
+
+.home-care {
+    background: linear-gradient(180deg, $light 0%, rgba($secondary, 0.22) 100%);
+}
+
+.home-care-icon {
+    display: inline-flex;
+    width: 3rem;
+    height: 3rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: $primary;
+    color: #fff;
+    font-size: 1.35rem;
+}
+
+.home-care-card {
+    color: $body-color;
+    box-shadow: 0 6px 24px rgba($dark, 0.06);
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.home-care-card:hover,
+.home-care-card:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 32px rgba($dark, 0.12);
+}
+
+.home-care-card .price {
+    font-family: $headings-font-family;
+    font-size: 1.35rem;
+    color: $primary;
+}
